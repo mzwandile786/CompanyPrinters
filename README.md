@@ -24,6 +24,23 @@ Company Printers is an ASP.NET WebForms application designed to manage printers,
 The system uses SQL Server for data storage.
 Database scripts can be found in the /Database folder.
 
+## 📷 Application Screenshots
+
+### Printers Dashboard
+![Printers Dashboard](Screenshots/Printers-dashboard.png)
+
+### Users Dashboard
+![Users Dashboard](Screenshots/Users-dashboard.png)
+
+### Add Printer Modal
+![Add Printer](Screenshots/add-printer-modal.png)
+
+### Confirm Delete Message
+![Confirm Message](Screenshots/confirm-message.png)
+
+### Notification Message
+![Notification](Screenshots/notification-message.png)
+
 ## 👨‍💻 Author
 Mzwandile Byron Mngadi
 Advanced Diploma in ICT
