@@ -1,0 +1,181 @@
+﻿/* Targeted fix for the Telerik Trial Banner */
+#t-license-banner,
+.t-license-banner,
+div[id*="license-banner"],
+.rgNotice,
+.t-alert {
+    display: none !important;
+    visibility: hidden !important;
+    opacity: 0 !important;
+    pointer-events: none !important;
+    height: 0 !important;
+    width: 0 !important;
+    position: absolute !important;
+    left: -9999px !important; /* Pushes it off-screen just in case */
+}
+/* =========================
+   PAGE TITLE
+========================= */
+.page-title {
+    position: static !important; /* Resets any floating/absolute positioning */
+    float: none !important;
+    font-size: 42px !important;
+    font-weight: 800 !important;
+    color: #1f4fd8 !important;
+    text-align: center !important;
+    display: block !important;
+    width: 100% !important;
+   
+}
+
+.grid-wrapper {
+    display: flex;
+    justify-content: center;
+    padding: 20px 40px;
+    width: 100%;
+}
+
+.radgrid-container {
+    width: 100%;
+    margin: 20px auto;
+    padding: 10px 20px;
+    background-color: #fff;
+    border-radius: 6px;
+    box-sizing: border-box;
+}
+
+.RadGrid {
+    width: 115%;
+    margin-left: -100px;
+}
+
+/* =========================
+   RADWINDOW (POPUP) FIX
+========================= */
+.RadWindow.rwModalWindow {
+    width: 450px !important;
+    height: 520px !important;
+}
+
+/* =========================
+   GRID COMMAND BAR
+========================= */
+.RadGrid .rgCommandItem {
+    background: #ffffff !important;
+    border: none !important;
+}
+
+.custom-command-bar {
+    padding: 15px 10px !important;
+}
+
+/* =========================
+   ADD BUTTON
+========================= */
+.designation-add-btn {
+    text-decoration: none !important;
+    background-color: #28a745;
+    color: #fff !important;
+    padding: 10px 22px;
+    border-radius: 15px;
+    font-weight: 600;
+    font-size: 14px;
+    display: inline-block;
+    cursor: pointer;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.15);
+    transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+    .designation-add-btn:hover {
+        background-color: #218838 !important;
+        color: #fff !important;
+        transform: translateY(-1px);
+    }
+
+/* =========================
+   POPUP FORM
+========================= */
+.custom-edit-form {
+    padding: 25px;
+    background: #ffffff;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    font-size: 14px;
+}
+
+/* ===== BUTTON ROW ===== */
+.popup-form .form-buttons {
+    display: flex;
+    justify-content: flex-end; /* Aligns buttons to the right */
+    gap: 15px;
+    margin-top: 15px;
+    padding-top: 4px;
+    border-top: 1px solid #eeeeee;
+}
+
+
+/* =========================
+   FORM BUTTONS
+========================= */
+.popup-btn-save {
+    background-color: #28a745 !important;
+    color: white !important;
+    border: none !important;
+    padding: 10px 28px;
+    border-radius: 15px;
+    font-weight: 500;
+    cursor: pointer;
+    border-radius:15px !important;
+}
+
+/* Hover for Save Button (Turns Darker Green) */
+.designation-add-btn .btn-save:hover {
+    background-color: #218838 !important;
+    color: #ffffff !important;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+
+.popup-form .popup-btn-save:hover {
+    background-color: #218838 !important;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+/* Normal state for the Clear button */
+.popup-btn-cancel {
+    background-color: #f4f4f4; /* Light grey */
+    color: #111; /* Dark text */
+    border: 1px solid #ccc;
+    padding: 6px 15px;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s ease; /* Smooth transition */
+}
+
+    /* Hover state */
+    .popup-btn-cancel:hover {
+        background-color: #e2e2e2; /* Slightly darker grey */
+        border-color: #bbb;
+    }
+
+/*=========================
+   BUTTON ROW
+========================= */
+.custom-button-row {
+    text-align: right;
+    padding-top: 15px;
+    border-top: 1px solid #eee;
+}
+
+
+.RadGrid .rgEditForm {
+    position: fixed !important;
+    top: 50% !important;
+    left: 50% !important;
+    transform: translate(-50%,-50%) !important;
+}
+
+
+
+

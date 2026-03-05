@@ -1,0 +1,607 @@
+﻿
+/* Targeted fix for the Telerik Trial Banner */
+#t-license-banner,
+.t-license-banner,
+div[id*="license-banner"],
+.rgNotice,
+.t-alert {
+    display: none !important;
+    visibility: hidden !important;
+    opacity: 0 !important;
+    pointer-events: none !important;
+    height: 0 !important;
+    width: 0 !important;
+    position: absolute !important;
+    left: -9999px !important; /* Pushes it off-screen just in case */
+}
+
+/* Force every parent to be 100% */
+html, body, form, .grid-container {
+    width: 100% !important;
+    max-width: 100% !important;
+}
+/* =========================
+   GRID WRAPPER
+========================= */
+.grid-wrapper {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    width: 100%;
+   
+}
+    .grid-wrapper::before,
+    .grid-wrapper::after {
+        pointer-events: none;
+    }
+
+
+.radgrid-container {
+    width: 98vw; /* ✅ 98% of screen width */
+    max-width: 98vw;
+    margin: 20px auto;
+    padding: 10px 20px;
+    background-color: #fff;
+    border-radius: 6px;
+    box-sizing: border-box;
+}
+
+.RadGrid {
+    width: 99vw !important;
+    max-width: 99vw !important;
+}
+
+/* Ensure the master table inside fills the grid */
+.rgMasterTable {
+    width: 100% !important;
+}
+
+         
+   
+ 
+
+
+/* Make filter dropdowns full width like date pickers */
+.filter-box .RadComboBox {
+    width: 690px !important;
+    height: 6px !important;
+    border-radius: 10px !important;
+    box-sizing: border-box !important;
+    display: flex !important;
+    align-items: center !important;
+}
+
+    /* Fix internal Telerik structure */
+    .filter-box .RadComboBox .rcbInner,
+    .filter-box .RadComboBox .rcbTable,
+    .filter-box .RadComboBox .rcbInputCell {
+        width: 100% !important;
+        height: 100% !important;
+        border: none !important;
+        background: transparent !important;
+    }
+
+    /* Center text vertically */
+    .filter-box .RadComboBox .rcbInput {
+        height: 100% !important;
+        line-height: 43px !important;
+        padding-left: 10px !important;
+    }
+
+
+/* RadGrid itself */
+.RadGrid,
+.RadGrid_WebBlue {
+    margin: 0 auto !important; /* true center */
+    float: none !important; /* ❗ must remove float */
+
+}
+
+
+
+
+/* Restore Borders and Fix Alignment */
+.RadGrid, .RadGrid_WebBlue {
+    margin: 0 auto !important;
+    float: none !important;
+    /* Force borders to show */
+
+}
+
+    /* Ensure individual cells have borders */
+    .RadGrid .rgMasterTable td,
+    .RadGrid .rgMasterTable th {
+        border: 1px solid #e0e0e0 !important;
+    }
+
+
+/* Ensure the master table inside fills the grid */
+.rgMasterTable {
+    width: 100% !important;
+}
+
+.page-title {
+    text-align: center;
+    margin-bottom: 45px;
+}
+
+    .page-title h2 {
+        font-size: 42px;
+        font-weight: 800;
+        color: #1f4fd8;
+        margin: 0;
+    }
+
+/* ==========================
+   FILTER PANEL CONTAINER
+   ========================== */
+.filter-box {
+    width: 860px;
+    margin: 30px auto 70px auto; /* 👈 adds 40px space below  margin: top right bottom left; */
+
+    background: #ffffff;
+    border: 1px solid #dcdcdc;
+    border-radius: 14px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.1);
+    padding: 40px 50px;
+}
+
+.filter-row {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.filter-label {
+    width: 150px;
+    text-align: left;
+    font-weight: 600;
+    color: #2c2c2c;
+    font-size: 15px;
+    margin-right: 20px;
+}
+
+/* FORCE DDL TO LOOK LIKE ONE SOLID BOX */
+.printer-popup-form .RadComboBox {
+    width: 100% !important;
+    height: 10px !important; /* Matches your new field height */
+    background-color: #ffffff !important;
+    border: 1px solid #dcdcdc !important; /* Single border for the whole box */
+    border-radius: 0px !important;
+    box-sizing: border-box !important;
+    display: block !important;
+}
+
+    /* Remove internal Telerik table borders/backgrounds */
+    .printer-popup-form .RadComboBox .rcbInputCell,
+    .printer-popup-form .RadComboBox .rcbArrowCell,
+    .printer-popup-form .RadComboBox .rcbTable {
+        border: none !important;
+        background: transparent !important;
+        background-image: none !important;
+    }
+
+/* ==========================
+   DATE PICKERS SIZE
+   ========================== */
+.filter-box .RadPicker,
+.filter-box .RadDatePicker {
+    width: 690px !important;
+}
+
+/* Force internal table behavior to prevent overflow */
+.RadPicker table,
+.RadPicker .rcpTable {
+    width: 100% !important;
+    table-layout: fixed;
+}
+
+.RadPicker .riSingle .riTextBox {
+    width: 100% !important;
+    box-sizing: border-box !important;
+}
+
+/* ==========================
+   BUTTONS (Alignment & Spacing)
+   ========================== */
+.button-container {
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    gap: 15px !important; /* spacing between buttons */
+    width: auto !important; /* 🔥 CRITICAL */
+    margin-top: 30px !important;
+}
+
+.filter-row.justify-content-center {
+    display: flex !important;
+    align-items: center !important;
+    width: 100% !important;
+}
+
+    /* 🔥 Align buttons with inputs */
+    .filter-row.justify-content-center .button-container {
+        margin-left: 170px; /* label width + gap */
+    }
+.filter-label {
+    width: 150px;
+    margin-right: 20px;
+}
+
+.button-container .btn,
+.button-container .RadButton,
+.button-container a,
+.button-container button,
+.button-container input {
+    width: 145px !important;
+    height: 50px !important;
+    min-width: 145px !important;
+    font-size: 13px !important;
+    font-weight: 600 !important;
+    border-radius: 6px !important;
+    display: inline-flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    margin: 0 !important;
+}
+
+ Push Group to the Right  
+.btn-success {
+    margin-right: 80px !important;
+}
+
+.btn-primary {
+    margin-right: 25px !important;
+    width:100px!important
+}
+
+.btn-secondary {
+    margin-right: 60px !important;
+    width:90px!important
+} 
+
+
+
+
+/* ==========================
+   COLORS
+   ========================== */
+.btn-danger-delete {
+    background-color: red !important;
+    color: white !important;
+    border: 0px solid #f5c2c7 !important;
+    font-size: 15px !important;
+    margin-left: auto !important;
+    margin-right: 20px !important;
+    width: 150px !important;
+    height: 45px !important;
+}
+
+.btn-success {
+    background-color: #198754 !important;
+    border-color: #198754 !important;
+    color: white !important;
+}
+
+.btn-primary {
+    background-color: #0d6efd !important;
+    border-color: #0d6efd !important;
+    color: white !important;
+}
+/* Normal State for Clear Button */
+.btn-secondary {
+    background-color: #f8f9fa !important; /* Very light gray */
+    border: 1px solid #ced4da !important; /* Subtle border */
+    color: #212529 !important; /* Dark text for readability */
+    transition: all 0.2s ease-in-out;
+}
+
+    /* Hover State for Clear Button */
+    .btn-secondary:hover {
+        background-color: #e2e6ea !important; /* Slightly darker gray on hover */
+        border-color: #adb5bd !important; /* Darker border on hover */
+        color: #212529 !important; /* Keep text dark */
+        cursor: pointer;
+    }
+
+.btn-add-user {
+    text-decoration: none !important; /* 🔥 remove underline */
+    background-color: #28a745; /* green */
+    color: #fff !important;
+    padding: 10px 22px;
+    border-radius: 6px;
+    font-weight: 600;
+    font-size: 14px;
+    display: inline-block;
+    transition: all 0.2s ease-in-out;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.15);
+    width: 150px;
+    margin-right: 15px;
+}
+
+/* CANCEL BUTTON (RED) FOR RADBUTTONS */
+.RadWindow .rwContent .btn-cancel,
+.RadWindow .rwContent .RadButton.btn-cancel {
+    background-color: #dc3545 !important; /* red */
+    color: #fff !important;
+    border: none !important;
+    padding: 12px 38px !important;
+    border-radius: 14px !important;
+    font-weight: 700 !important;
+    cursor: pointer !important;
+    transition: background 0.2s ease, transform 0.1s ease;
+}
+/* ===== DANGER (Red) ===== */
+input.btn-danger-delete:hover {
+    background-color: #b02a37 !important;
+    border-color: #b02a37 !important;
+}
+
+/* ===== PRIMARY (Blue) ===== */
+.btn-primary:hover {
+    background-color: #0b5ed7 !important; /* dark blue */
+    border-color: #0b5ed7 !important;
+}
+/* ===== SECONDARY (Gray) ===== */
+.btn-secondary:hover {
+    background-color: #e2e6ea;
+}
+
+
+/* ✅ Dark green hover */
+.btn-add-user:hover {
+    background-color: #1e7e34; /* dark green */
+    color: #fff !important;
+    text-decoration: none !important;
+}
+
+.RadWindow .rwContent .btn-cancel:hover,
+.RadWindow .rwContent .RadButton.btn-cancel:hover {
+    background-color: #c82333 !important; /* darker red */
+    transform: translateY(-1px);
+}
+
+/* ===== TABLE LAYOUT ===== */
+.printer-popup-form table {
+    width: 100%;
+    border-spacing: 0px 18px; /* Vertical gap between rows */
+    border-collapse: separate;
+}
+
+/* ===== LABELS ===== */
+.printer-popup-form td:first-child {
+    font-weight: 600;
+    color: #2c2c2c;
+    width: 35%;
+    font-size: 15px;
+    vertical-align: middle;
+}
+/*
+/* FORCE DDL TO LOOK LIKE ONE SOLID BOX - UPDATED */
+.printer-popup-form .RadComboBox,
+.filter-box .RadComboBox {
+    width: 100% !important;
+    height: 45px !important;
+    background-color: #ffffff !important;
+    border: 1px solid #dcdcdc !important;
+    border-radius: 10px !important;
+    box-sizing: border-box !important;
+    display: flex !important;
+    align-items: center !important;
+}
+
+/* Remove internal Telerik table borders that cause the "broken" look */
+.RadComboBox .rcbInputCell,
+.RadComboBox .rcbArrowCell,
+.RadComboBox .rcbTable,
+.RadComboBox .rcbInner {
+    border: none !important;
+    background: transparent !important;
+    background-image: none !important;
+    height: 100% !important;
+}
+/* Ensure the text inside the box is centered vertically */
+.RadComboBox .rcbInput {
+    height: 100% !important;
+    line-height: normal !important;
+    padding-left: 10px !important;
+    font-size: 14px !important;
+}
+/* 1. STYLE STANDARD BOXES ONLY (Excluding ComboBox) */
+.printer-popup-form input[type="text"]:not(.rcbInput),
+.printer-popup-form .RadInput:not(.RadComboBox) {
+    width: 450px !important;
+    height: 45px !important;
+    border-radius: 10px !important;
+    border: 1px solid #dcdcdc !important;
+    padding-left: 12px !important;
+    font-size: 14px !important;
+    background-color: #ffffff !important;
+    box-sizing: border-box !important;
+    display: inline-block !important;
+}
+/* 2. STYLE COMBOBOX ALONE */
+.printer-popup-form .RadComboBox {
+    width: 450px !important; /* Matches Textbox exactly */
+    height: 45px !important;
+    background-color: #ffffff !important;
+    border: 1px solid #dcdcdc !important;
+    border-radius: 10px !important;
+    box-sizing: border-box !important;
+    display: inline-flex !important; /* Use flex to align arrow and text */
+    align-items: center !important;
+}
+    /* 3. CLEAN UP COMBOBOX INTERNALS */
+    .printer-popup-form .RadComboBox .rcbInner,
+    .printer-popup-form .RadComboBox .rcbTable,
+    .printer-popup-form .RadComboBox .rcbInputCell {
+        width: 100% !important;
+        height: 100% !important;
+        border: none !important;
+        background: transparent !important;
+    }
+
+    .printer-popup-form .RadComboBox .rcbInput {
+        height: 100% !important;
+        line-height: 43px !important; /* Centering the text */
+        padding-left: 10px !important;
+        border: none !important;
+        box-shadow: none !important;
+    }
+/* ===== BUTTON ROW ===== */
+.printer-popup-form .form-buttons {
+    display: flex;
+    justify-content: flex-end; /* Aligns buttons to the right */
+    gap: 15px;
+    margin-top: 15px;
+    padding-top: 4px;
+    border-top: 1px solid #eeeeee;
+}
+/* ===== SAVE/UPDATE BUTTON (Primary Blue) ===== */
+.printer-popup-form .btn-save {
+    background-color: #28a745 !important;
+    color: white !important;
+    border: none !important;
+    padding: 10px 35px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 14px;
+    transition: background 0.2s;
+    border-radius: 15px !important;
+}
+
+    .printer-popup-form .btn-save:hover {
+        background-color: #218838 !important;
+        transform: translateY(-1px);
+        box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    }
+/* ===== CLEAR BUTTON (Neutral Gray) ===== */
+.printer-popup-form .btn-cancel {
+    background-color: #f0f0f0 !important; /* light gray background */
+    color: #333 !important; /* dark text for readability */
+    border: 1px solid #ccc !important; /* subtle border */
+    padding: 10px 35px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 14px;
+    transition: all 0.2s ease-in-out;
+}
+
+    .printer-popup-form .btn-cancel:hover {
+        background-color: #e2e2e2 !important; /* slightly darker gray on hover */
+        border-color: #999 !important; /* darker border on hover */
+        color: #212529 !important; /* ensure text remains readable */
+        transform: translateY(-1px);
+    }
+
+/* Clear button inside RadWindow popup */
+.RadWindow .rwContent .printer-popup-form .btn-cancel,
+.RadWindow .rwContent .RadButton.btn-cancel {
+    background-color: #f0f0f0 !important; /* light gray */
+    color: #333 !important; /* dark text */
+    border: 1px solid #ccc !important;
+    padding: 10px 35px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 14px;
+    transition: all 0.2s ease-in-out;
+}
+
+    .RadWindow .rwContent .printer-popup-form .btn-cancel:hover,
+    .RadWindow .rwContent .RadButton.btn-cancel:hover {
+        background-color: #e2e2e2 !important; /* slightly darker gray */
+        border-color: #999 !important;
+        color: #212529 !important;
+        transform: translateY(-1px);
+    }
+
+/* ===== VALIDATION ERRORS ===== */
+.printer-popup-form .validator {
+    color: #dc3545;
+    font-size: 12px;
+    display: block;
+    margin-top: 4px;
+}
+
+/* Ensures the content area inside the window expands to fill it */
+.RadWindow.rwModalWindow .rwContent {
+    height: 100% !important;
+    min-height: 500px !important;
+}
+
+/* Adds some internal padding so the form doesn't hit the bottom */
+.custom-edit-form {
+    min-height: 450px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* Optional: Ensure the internal content looks balanced */
+.printer-popup-form {
+    padding: 20px;
+    background-color: #ffffff;
+}
+
+.RadGrid .rgEditForm {
+    position: fixed !important;
+    top: 50% !important;
+    left: 50% !important;
+    transform: translate(-50%,-50%) !important;
+}
+
+/* Remove borders from the table and cells inside the popup */
+.printer-popup-form table,
+.printer-popup-form td,
+.printer-popup-form th {
+    border: none !important;
+    border-collapse: collapse !important;
+}
+
+/* Ensure the panel wrapper doesn't have an extra border */
+.printer-popup-form {
+    border: none !important;
+    box-shadow: none !important; /* Optional: removes the outer shadow if you want it flat */
+}
+
+    /* Ensure inputs only have the 1px solid border you defined earlier */
+    .printer-popup-form input[type="text"],
+    .printer-popup-form .RadInput {
+        border: 1px solid #dcdcdc !important;
+        outline: none !important;
+    }
+
+    /* 1. Target the specific table inside the popup to remove borders and spacing */
+    .printer-popup-form table {
+        border: none !important;
+        border-collapse: collapse !important; /* This removes the gaps creating 'lines' */
+        border-spacing: 0 !important;
+    }
+
+    /* 2. Target every cell specifically to ensure no lines are drawn */
+    .printer-popup-form td,
+    .printer-popup-form th,
+    .RadGrid .rgEditForm td {
+        border: none !important;
+        padding: 10px !important; /* Add padding here since spacing is now 0 */
+    }
+
+/* 3. Remove the border from the Panel wrapper itself */
+.printer-popup-form {
+    border: none !important;
+    outline: none !important;
+}
+
+/* 4. Fix for Telerik's internal edit form wrapper */
+.RadGrid_WebBlue .rgEditForm {
+    border: none !important;
+}
+
+
+
+
+
+

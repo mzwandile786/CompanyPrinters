@@ -1,0 +1,86 @@
+﻿/* Container styling - Added shadow and centered text */
+.login-container {
+    max-width: 500px;
+    margin: 50px auto;
+    padding: 10px;
+    background: #ffffff;
+    border-radius: 12px 35px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    font-family: 'Segoe UI', Arial, sans-serif;
+    text-align: left;
+}
+
+/* Company Printers Title */
+.portal-title {
+    text-align: center;
+    color: #1a66ff; /* Bright blue */
+    font-size: 28px;
+    font-weight: 800;
+}
+/* Login Subheader */
+.login-header {
+    text-align: center;
+    color: #333;
+    font-size: 24px;
+    font-weight: 500;
+    margin-bottom: 30px;
+}
+
+/* "Login" Subheader */
+.login-header {
+    color: #333;
+    font-size: 24px;
+    font-weight: 500;
+    margin-bottom: 30px;
+}
+.form-label {
+    display: block;
+    text-align: left !important;
+}
+
+/* Input boxes - White background with grey borders as seen in image */
+.custom-input .riTextBox {
+    background-color: #ffffff !important;
+    border: 1px solid #999 !important; /* Thinner, darker border */
+    border-radius: 6px !important;
+    padding: 12px 12px 12px 40px !important; /* Space for icons */
+    height: 50px !important;
+    font-size: 16px !important;
+    width: 100% !important;
+    box-sizing: border-box;
+}
+
+/* The Blue Login Button - Matching the screenshot exactly */
+.btn-primary-custom,
+div.RadButton.btn-primary-custom {
+    background-color: blue !important; /* The specific indigo/blue in photo */
+    background-image: none !important;
+    border: none !important;
+    color: white !important;
+    width: 100% !important;
+    height: 50px !important;
+    padding: 15px !important;
+    font-size: 18px !important;
+    font-weight: bold !important;
+    border-radius: 6px !important;
+    cursor: pointer;
+    margin-top: 35px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+    /* Target Telerik specific button text */
+    div.RadButton.btn-primary-custom .rbText {
+        color: white !important;
+        line-height: 50px !important;
+    }
+
+    /* Hover effect for the blue button */
+    .btn-primary-custom:hover,
+    div.RadButton.btn-primary-custom:hover {
+        background-color: #303f9f !important;
+    }
+
+#btnLogin {
+    margin-top: 35px;
+}
+

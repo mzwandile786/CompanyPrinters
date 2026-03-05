@@ -1,0 +1,351 @@
+﻿/* Targeted fix for the Telerik Trial Banner */
+#t-license-banner,
+.t-license-banner,
+div[id*="license-banner"],
+.rgNotice,
+.t-alert {
+    display: none !important;
+    visibility: hidden !important;
+    opacity: 0 !important;
+    pointer-events: none !important;
+    height: 0 !important;
+    width: 0 !important;
+    position: absolute !important;
+    left: -9999px !important; /* Pushes it off-screen just in case */
+}
+.grid-wrapper {
+    display: flex;
+    justify-content: center;
+    padding: 20px 40px;
+    width: 100%;
+}
+
+.radgrid-container {
+    width: 100%;
+    margin: 20px auto;
+    padding: 10px 20px;
+    background-color: #fff;
+    border-radius: 6px;
+    box-sizing: border-box;
+}
+
+.RadGrid {
+    width: 100%;
+}
+
+/* =========================
+   PAGE TITLE
+========================= */
+.page-header {
+    text-align: center;
+    margin: 20px 0 30px;
+}
+
+.Tittle {
+    font-size: 42px;
+    font-weight: 800;
+    color: #1f4fd8;
+    margin: 0;
+}
+
+/* =========================
+   SEARCH / FILTER SECTION
+========================= */
+.search-section {
+    display: flex;
+    justify-content: center;
+    margin: 40px 0;
+}
+
+.filter-wrapper {
+    background: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    padding: 40px 50px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    min-width: 500px; /* wider container */
+    max-width: 700px;
+}
+
+/* STACK EVERYTHING VERTICALLY */
+.filter-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* ROW FOR LABEL + DROPDOWN */
+.filter-row {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+/* Label */
+.filter-label {
+    font-weight: 700;
+    font-size: 16px;
+    color: #333;
+    min-width: 150px; /* fixed width for alignment */
+}
+
+
+
+/* Dropdown */
+.dropdown-search {
+    flex-grow: 1; /* takes remaining space */
+    height: 42px;
+    padding: 6px 12px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    outline: none;
+}
+
+    .dropdown-search:focus {
+        border-color: #007bff;
+    }
+
+/* =========================
+   BUTTONS SIDE-BY-SIDE
+========================= */
+.button-row {
+    display: flex;
+    gap: 12px;
+}
+
+    /* Both buttons equal width */
+    .button-row .btn-add-user,
+    .button-row .btn-clear {
+        flex: 1; /* equal width */
+        text-align: center;
+    }
+
+/* Add New User */
+.btn-add-user {
+    background-color: #28a745;
+    color: #fff !important;
+    padding: 10px 20px;
+    border-radius: 12px;
+    font-weight: 600;
+    text-decoration: none !important;
+    cursor: pointer;
+    transition: background 0.2s ease, transform 0.1s ease;
+}
+
+    .btn-add-user:hover {
+        background-color: #218838;
+        transform: translateY(-1px);
+    }
+
+/* Clear button */
+.btn-clear {
+    background-color: #f8f9fa;
+    color: #333;
+    padding: 10px 20px;
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s ease;
+}
+
+    .btn-clear:hover {
+        background-color: #e2e6ea;
+    }
+
+/* ===== FULLSCREEN POPUP BACKGROUND ===== */
+.RadWindow .rwContent {
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.45); /* dark overlay */
+}
+
+/* ===== FORM CARD ===== */
+.popup-form {
+    width: 100%;
+    height: 100%;
+    padding: 25px 35px;
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    font-family: Arial, sans-serif;
+    box-sizing: border-box;
+}
+
+.RadWindow .rwContent {
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.45);
+    padding: 0;
+}
+
+
+
+/* ===== TABLE ===== */
+.popup-form table {
+    width: 100%;
+    border-spacing: 12px 8px;
+}
+
+/* ===== LABELS ===== */
+.popup-form td:first-child {
+    font-weight: bold;
+    width: 30%;
+    white-space: nowrap;
+}
+
+/* ===== INPUTS ===== */
+.popup-form input[type="text"],
+.popup-form input[type="password"],
+.popup-form select {
+    width: 100%;
+    padding: 10px 14px;
+    border-radius: 6px; /* rounded as requested */
+    border: 1px solid #ccc;
+    font-size: 14px;
+}
+
+/* ===== VALIDATION ===== */
+.popup-form .validator {
+    color: red;
+    font-size: 12px;
+}
+
+/* ===== BUTTON ROW ===== */
+.popup-form .form-buttons {
+    display: flex;
+    justify-content: flex-end;
+    gap: 12px;
+    margin-top: 25px;
+}
+
+/* ===== SAVE BUTTON ===== */
+.popup-form .btn-save {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 10px 28px;
+    border-radius: 15px;
+    cursor: pointer;
+    font-weight: bold;
+}
+    /* ===== HOVER ===== */
+    .popup-form .btn-save:hover {
+        background-color: #218838;
+    }
+
+/* ===== CLEAR BUTTON (Neutral Gray) ===== */
+.popup-form .btn-cancel {
+    background-color: #f0f0f0 !important; /* light gray background */
+    color: #333 !important; /* dark text for readability */
+    border: 1px solid #ccc !important; /* subtle border */
+    padding: 10px 35px;
+    border-radius: 15px;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 14px;
+    transition: all 0.2s ease-in-out;
+}
+/* FORCE border-radius on Telerik buttons */
+.RadButton.btn-cancel,
+.RadButton.btn-cancel .rbDecorated {
+    border-radius: 15px !important;
+    overflow: hidden; /* 🔑 very important */
+}
+.popup-form .btn-cancel,
+.popup-form input.btn-cancel,
+.popup-form button.btn-cancel {
+    border-radius: 15px !important;
+}
+.popup-form .btn-cancel:hover {
+    background-color: #e2e2e2 !important; /* slightly darker gray on hover */
+    border-color: #999 !important; /* darker border on hover */
+    color: #212529 !important; /* ensure text remains readable */
+    transform: translateY(-1px);
+}
+
+/* Clear button inside RadWindow popup */
+.RadWindow .rwContent .printer-popup-form .btn-cancel,
+.RadWindow .rwContent .RadButton.btn-cancel {
+    background-color: #f0f0f0 !important; /* light gray */
+    color: #333 !important; /* dark text */
+    border: 1px solid #ccc !important;
+    padding: 10px 35px;
+    border-radius: 15px;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 14px;
+    transition: all 0.2s ease-in-out;
+}
+
+/* Add New User button */
+.btn-add-user {
+    text-decoration: none !important; /* 🔥 remove underline */
+    background-color: #28a745; /* green */
+    color: #fff !important;
+    padding: 10px 22px;
+    border-radius: 15px;
+    font-weight: 600;
+    font-size: 14px;
+    display: inline-block;
+    transition: all 0.2s ease-in-out;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.15);
+}
+
+    /* Hover effect */
+    .btn-add-user:hover {
+        background-color: #218838;
+        color: #fff;
+        text-decoration: none !important;
+        transform: translateY(-1px);
+    }
+
+/* Remove Telerik default link styles */
+.grid-toolbar a,
+.grid-toolbar a:hover,
+.grid-toolbar a:visited {
+    text-decoration: none !important;
+    color: inherit;
+}
+
+.RadGrid .rgEditForm {
+    position: fixed !important;
+    top: 50% !important; /* was 50% */
+    left: 50% !important;
+    transform: translate(-50%,-50%) !important;
+}
+
+::placeholder {
+    color: #9aa0a6;
+    font-style: italic;
+}
+
+/* Force your grid wrapper to the top, overlapping the banner if needed */
+.grid-wrapper {
+    position: relative;
+    margin-top: -50px !important; /* This pulls your content UP over the banner */
+    z-index: 9999; /* Ensures your links stay on top of the banner */
+}
+
+/* Ensure the body doesn't add extra padding for the banner */
+body {
+    padding-top: 0 !important;
+    margin-top: 0 !important;
+}
+
+/* Ensure Save button inside RadWindow popup gets rounded corners */
+.RadWindow .rwContent .popup-form .btn-save,
+.RadWindow .rwContent .RadButton.btn-save,
+.RadWindow .rwContent .RadButton.btn-save .rbDecorated {
+    border-radius: 15px !important; /* enforce rounding */
+    overflow: hidden; /* prevent inner styles from breaking the corners */
+}
+
+
+    
+
+
+
