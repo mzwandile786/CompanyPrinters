@@ -25,6 +25,8 @@ The system uses SQL Server for data storage.
 Database scripts can be found in the /Database folder.
 
 ## 📷 Application Screenshots
+## 🖥 System Interface
+Below are some screenshots of the Company Printers Management System interface.
 
 ### Printers Dashboard
 ![Printers Dashboard](Screenshots/Printers-dashboard.png)
